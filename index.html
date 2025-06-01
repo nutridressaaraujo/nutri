@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andressa Araujo | Nutricionista</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <style>
+        /* Custom CSS for animations and font */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for navigation */
+        }
+
+        .logo {
+            max-width: 3rem;
+            height: auto;
+            margin-right: 1rem;        
+        }
+
+        .opensans {
+            color: #3E3E3E !important;
+            font-family: 'Open Sans', sans-serif !important;
+        }
+
+        /* Animations */
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in-left {
+            animation: fadeInLeft 1s ease-out forwards;
+        }
+        .animate-fade-in-right {
+            animation: fadeInRight 1s ease-out forwards;
+        }
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        /* Specific styles for Lucide icons */
+        .lucide {
+            display: inline-block; /* Ensure icons are properly aligned */
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="image/logo.png" class="logo" alt="logo">
+                <span class="font-bold text-gray-800 opensans" style="font-size: 2rem;">Andressa Araujo</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-green-500 font-medium transition duration-300 ease-in-out transform hover:scale-105">Início</a>
+                <a href="#about" class="text-gray-600 hover:text-green-500 font-medium transition duration-300 ease-in-out transform hover:scale-105">Sobre Mim</a>
+                <a href="#services" class="text-gray-600 hover:text-green-500 font-medium transition duration-300 ease-in-out transform hover:scale-105">Serviços</a>
+                <a href="#tips" class="text-gray-600 hover:text-green-500 font-medium transition duration-300 ease-in-out transform hover:scale-105">Dicas</a>
+                <a href="#redes" class="text-gray-600 hover:text-green-500 font-medium transition duration-300 ease-in-out transform hover:scale-105">Redes Sociais</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <i data-lucide="menu" size="28"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4 px-4">
+            <a href="#home" class="block w-full text-left py-2 text-gray-700 hover:bg-gray-100 px-4 rounded-md transition duration-300 ease-in-out">Início</a>
+            <a href="#about" class="block w-full text-left py-2 text-gray-700 hover:bg-gray-100 px-4 rounded-md transition duration-300 ease-in-out">Sobre Mim</a>
+            <a href="#services" class="block w-full text-left py-2 text-gray-700 hover:bg-gray-100 px-4 rounded-md transition duration-300 ease-in-out">Serviços</a>
+            <a href="#tips" class="block w-full text-left py-2 text-gray-700 hover:bg-gray-100 px-4 rounded-md transition duration-300 ease-in-out">Dicas</a>
+            <a href="#redes" class="block w-full text-left py-2 text-gray-700 hover:bg-gray-100 px-4 rounded-md transition duration-300 ease-in-out">Redes Sociais</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="relative bg-gradient-to-r from-green-50 to-blue-50 min-h-screen flex items-center justify-center pt-24 pb-12">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+                <div class="md:w-1/2 mb-8 md:mb-0 animate-fade-in-left">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                        Sua Jornada para uma <span class="text-green-600">Vida Mais Saudável</span> Começa Aqui.
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-8 max-w-md mx-auto md:mx-0">
+                        Nutricionista dedicada a guiar você rumo ao bem-estar através de uma alimentação consciente e personalizada.
+                    </p>
+                    <a href="https://api.whatsapp.com/send/?phone=5518981474549&text=Ol%C3%A1%2C+quero+agendar+uma+consulta+nutricional%21&type=phone_number&app_absent=0" target="_blank" class="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-green-700 transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-300">
+                        Agende Sua Consulta
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-fade-in-right">
+                    <img
+                        src="image/dre.png"
+                        alt="Nutricionista sorrindo com alimentos saudáveis"
+                        class="rounded-full shadow-2xl w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover border-4 border-white transform hover:scale-105 transition-transform duration-500"
+                        onerror="this.onerror=null;this.src='https://placehold.co/500x500/A7F3D0/10B981?text=Nutricionista';"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="bg-white py-16 md:py-24">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 flex justify-center animate-fade-in-left">
+                    <img
+                        src="image/dre1.JPG"
+                        alt="Nutricionista em consultório"
+                        class="rounded-lg shadow-xl w-full max-w-md object-cover transform hover:scale-105 transition-transform duration-500"
+                        onerror="this.onerror=null;this.src='https://placehold.co/500x500/D1FAE5/059669?text=Sobre+Mim';"
+                    />
+                </div>
+                <div class="md:w-1/2 text-center md:text-left animate-fade-in-right">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                        Olá! Sou <span class="text-green-600" >Andressa Araujo</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Formada em Nutrição pela Universidade do Oeste Paulista (Unoeste), minha paixão é ajudar as pessoas a descobrirem o poder da alimentação para transformar suas vidas. Acredito que a nutrição vai muito além da contagem de calorias; é sobre nutrir o corpo e a mente, construindo hábitos saudáveis e sustentáveis.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Minha abordagem é personalizada e empática, focada em entender suas necessidades, desafios e objetivos. Juntos, vamos criar um plano alimentar que se encaixe na sua rotina, respeitando suas preferências e promovendo uma relação saudável com a comida.
+                    </p>
+                    <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
+                        <div class="flex items-center text-green-600 font-semibold">
+                            <i data-lucide="utensils" class="mr-2" size="20"></i> Alimentação Consciente
+                        </div>
+                        <div class="flex items-center text-green-600 font-semibold">
+                            <i data-lucide="book-open" class="mr-2" size="20"></i> Educação Nutricional
+                        </div>
+                        <div class="flex items-center text-green-600 font-semibold">
+                            <i data-lucide="message-circle" class="mr-2" size="20"></i> Suporte Contínuo
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="bg-gray-50 py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
+                    Meus <span class="text-green-600">Serviços</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up">
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-gray-100 flex flex-col items-center text-center">
+                        <div class="p-4 bg-green-100 rounded-full mb-6">
+                            <i data-lucide="user" class="text-green-600" size="48"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Consulta Nutricional Individual</h3>
+                        <p class="text-gray-600 leading-relaxed">Planos alimentares personalizados para suas necessidades, objetivos e estilo de vida. Foco em saúde, emagrecimento, ganho de massa ou condições específicas.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-gray-100 flex flex-col items-center text-center">
+                        <div class="p-4 bg-green-100 rounded-full mb-6">
+                            <i data-lucide="briefcase" class="text-green-600" size="48"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nutrição Esportiva</h3>
+                        <p class="text-gray-600 leading-relaxed">Otimize seu desempenho e recuperação com estratégias nutricionais específicas para atletas e praticantes de atividade física.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-gray-100 flex flex-col items-center text-center">
+                        <div class="p-4 bg-green-100 rounded-full mb-6">
+                            <i data-lucide="heart" class="text-green-600" size="48"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Reeducação Alimentar</h3>
+                        <p class="text-gray-600 leading-relaxed">Aprenda a fazer escolhas saudáveis de forma prazerosa e sustentável, construindo uma relação positiva com a comida.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-gray-100 flex flex-col items-center text-center">
+                        <div class="p-4 bg-green-100 rounded-full mb-6">
+                            <i data-lucide="utensils" class="text-green-600" size="48"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Planejamento de Refeições</h3>
+                        <p class="text-gray-600 leading-relaxed">Ajuda na organização e preparo de refeições nutritivas e práticas para facilitar sua rotina.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-gray-100 flex flex-col items-center text-center">
+                        <div class="p-4 bg-green-100 rounded-full mb-6">
+                            <i data-lucide="book-open" class="text-green-600" size="48"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Palestras e Workshops</h3>
+                        <p class="text-gray-600 leading-relaxed">Conteúdo educativo sobre diversos temas de nutrição para grupos, empresas e eventos.</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition duration-300 ease-in-out border border-gray-100 flex flex-col items-center text-center">
+                        <div class="p-4 bg-green-100 rounded-full mb-6">
+                            <i data-lucide="message-circle" class="text-green-600" size="48"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Acompanhamento Online</h3>
+                        <p class="text-gray-600 leading-relaxed">Suporte e orientação contínuos através de plataformas digitais, com a flexibilidade que você precisa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="bg-white py-16 md:py-24">            
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
+                    Dicas e <span class="text-green-600">Conhecimento</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up">
+                    <div class="bg-white rounded-lg shadow-md p-6 border border-gray-100 flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                        <div class="p-4 bg-yellow-100 rounded-full mb-6">
+                            <i data-lucide="lightbulb" class="text-yellow-500" size="48"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">5 Mitos Sobre Emagrecimento</h3>
+                        <p class="text-gray-600 mb-4">Desvende a verdade por trás das informações mais comuns sobre perda de peso.</p>
+                        <a href="#" class="text-green-600 hover:underline font-semibold">Leia Mais</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 border border-gray-100 flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                        <div class="p-4 bg-blue-100 rounded-full mb-6">
+                            <i data-lucide="utensils" class="text-blue-500" size="48"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Receitas Saudáveis para o Dia a Dia</h3>
+                        <p class="text-gray-600 mb-4">Ideias práticas e deliciosas para uma alimentação nutritiva sem complicação.</p>
+                        <a href="#" class="text-green-600 hover:underline font-semibold">Leia Mais</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 border border-gray-100 flex flex-col items-center text-center transform hover:scale-105 transition duration-300 ease-in-out">
+                        <div class="p-4 bg-red-100 rounded-full mb-6">
+                            <i data-lucide="heart" class="text-red-500" size="48"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">A Importância da Hidratação</h3>
+                        <p class="text-gray-600 mb-4">Descubra por que beber água é fundamental para sua saúde e bem-estar geral.</p>
+                        <a href="#" class="text-green-600 hover:underline font-semibold">Leia Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="redes" class="bg-gray-50 py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
+                    Me Siga nas <span class="text-green-600">Redes Sociais</span>
+                </h2>
+                <p class="text-lg text-gray-700 mb-10 max-w-2xl mx-auto">
+                    Acompanhe dicas diárias, receitas saudáveis e conteúdos exclusivos sobre nutrição e bem-estar.
+                </p>
+                <div class="flex justify-center space-x-8">
+                <a href="https://www.instagram.com/dressa_araujoo/" target="_blank" class="text-gray-600 hover:text-pink-500 transform hover:scale-110 transition-transform duration-300" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+                <a href="https://www.tiktok.com/@andressaaraujo811" target="_blank" class="text-gray-600 hover:text-black transform hover:scale-110 transition-transform duration-300" aria-label="TikTok">
+                    <i class="fab fa-tiktok fa-3x"></i>
+                </a>
+
+                <a href="https://api.whatsapp.com/send/?phone=5518981474549&text=Ol%C3%A1%2C+quero+agendar+uma+consulta+nutricional%21&type=phone_number&app_absent=0" target="_blank" class="text-gray-600 hover:text-green-500 transform hover:scale-110 transition-transform duration-300" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp fa-3x"></i>
+                </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="image/logo2.png" class="logo" alt="logo">
+                    <span class="text-xl font-bold">Andressa Araujo</span>
+                </div>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; <span id="current-year"></span> Andressa Araujo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons after the DOM is loaded
+        document.addEventListener('DOMContentLoaded', (event) => {
+            lucide.createIcons();
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIconHtml = '<i data-lucide="menu" size="28"></i>'; // Store original HTML for menu icon
+            const closeIconHtml = '<i data-lucide="x" size="28"></i>'; // Store original HTML for close icon
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenuButton.innerHTML = menuIconHtml; // Show menu icon
+                } else {
+                    mobileMenuButton.innerHTML = closeIconHtml; // Show close icon
+                }
+                lucide.createIcons(); // Re-initialize icons after changing innerHTML
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.innerHTML = menuIconHtml; // Reset to menu icon
+                    lucide.createIcons(); // Re-initialize icons
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    const headerOffset = 80; // Height of the fixed header
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                });
+            });
+
+            // Contact Form Submission
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+
+            if (contactForm) { // Ensure the form exists before adding event listener
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Prevent default form submission
+
+                    formStatus.textContent = 'Enviando...';
+                    formStatus.className = 'mt-4 text-center text-gray-600';
+
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+
+                    // Simple client-side validation
+                    if (!name || !email || !message) {
+                        formStatus.textContent = 'Por favor, preencha todos os campos.';
+                        formStatus.className = 'mt-4 text-center text-red-500';
+                        return;
+                    }
+
+                    // Simulate form submission
+                    setTimeout(() => {
+                        formStatus.textContent = 'Mensagem enviada com sucesso! Em breve entrarei em contato.';
+                        formStatus.className = 'mt-4 text-center text-green-600';
+                        contactForm.reset(); // Clear the form
+                    }, 1500);
+                });
+            }
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
